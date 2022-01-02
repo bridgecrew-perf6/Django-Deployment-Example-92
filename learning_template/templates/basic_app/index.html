@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load my_extras %}
+
+{% block body_block %}
+<a href="{% url 'basic_app:other' %}">Other</a>
+<a href="{% url 'admin:index' %}">Admin</a>
+<a href="{% url 'basic_app:relative' %}">Relative</a>
+<h1>welcome to Index</h1>
+<h1>{{ text|newcut:'world' }}</h1>
+<h1>{{ number|subt_new:"50" }}</h1>
+{% endblock %}
